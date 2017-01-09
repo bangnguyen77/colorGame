@@ -41,7 +41,7 @@ hardBtn.addEventListener("click", function() {
 
 resetButton.addEventListener("click", function() {
 	// generate all new colors
-	colors = generateRandomColors(numSquares); 
+	colors = generateRandomColors(numSquares);
 	// pick a new random color from array
 	pickedColor = pickColor();
 	// change colorDisplay to match picked color
@@ -50,7 +50,7 @@ resetButton.addEventListener("click", function() {
 	for(var i = 0; i < squares.length; i++) {
 		squares[i].style.background = colors[i];
 	}
-	h1.style.background = "#232323";
+	h1.style.background = "steelblue";
 })
 
 colorDisplay.textContent = pickedColor;
@@ -64,7 +64,7 @@ for(var i = 0; i < squares.length; i++) {
 		// grab color of clicked square
 		var clickedColor = this.style.background;
 
-		// compare color to pickedColor 
+		// compare color to pickedColor
 		console.log(clickedColor, pickedColor);
 		if(clickedColor === pickedColor) {
 			messageDisplay.textContent = "Correct!";
@@ -114,5 +114,3 @@ function randomColor() {
 
 	return "rgb(" + r + ", " + g + ", " + b +")";
 }
-
-
